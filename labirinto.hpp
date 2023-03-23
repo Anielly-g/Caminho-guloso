@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void GerarMatriz(ifstream& input);
+void LerMatriz(ifstream& input);
 void Caminhar(int** matriz,int N, int ContarMatriz, int* soma);
 void Caminho0(int** matriz, int *k,int* j,int* soma);
 void Caminho1(int** matriz, int* k, int* j,int* soma);

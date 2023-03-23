@@ -8,7 +8,7 @@ int main() {
     ifstream input;
     input.open("input.data",std::ios::in);
     
-    GerarMatriz(input);
+    LerMatriz(input);
 
 
     return 0;
