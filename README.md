@@ -33,6 +33,12 @@ E quando chega na última linha, independente de qual coluna esteja, apenas pode
 
 A comparação será feita entre a esquerda, direita, diagonais inferiores e o debaixo.
 
+## Entrada
+
+O primeiro passo da entrada é o arquivo "input.data" que é fornecido pelo usuário. Este arquivo deve estar na pasta principal junto dos outros e possuir a formatação em que na primeira linha é informado o tamanho da matriz como no exemplo abaixo:
+
+
+
 ## Implementação
 
 
