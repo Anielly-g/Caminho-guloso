@@ -63,6 +63,9 @@ No labirinto.hpp foram criadas as funções utilizadas para ler o arquivo e cami
 No labirinto.cpp foram desenvolvidas as funções criadas no hpp que serão explicadas a seguir:
 
 * void LerMatriz()
+
+
+
 ![image](https://user-images.githubusercontent.com/102706840/227355443-6ff1db44-e0ae-437c-aa7d-556e42944c6f.png)
 ![image](https://user-images.githubusercontent.com/102706840/227357154-53486503-b215-47cd-910b-0a9afea95638.png)
 
