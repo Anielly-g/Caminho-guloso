@@ -4,21 +4,21 @@
 
 Atividade avaliativa da disciplina Algoritmos e Estruturas de Dados I  sobre o o maior caminho percorrido em um labirinto.
 
-O arquivo (input.data) disponibilizado pelo código feito pelo professor Michel Pires é composto pela definição do número de matrizes e o  tamanho N x N que elas terão. Essas matrizes serão utilizadas como o labirinto a ser percorrido. O objetivo do problema é começar pela primeira matriz por uma coordenada que o usuário informará, depois chegar até a posição final dela(N,N) e nas matrizes seguintes começar da posição (0,0) e chegar na sua última(N,N) até todas elas serem lidas. 
+O arquivo (input.data) disponibilizado pelo código feito pelo professor Michel Pires é composto pela definição do número de matrizes e o  tamanho N x N que elas terão. Essas matrizes serão utilizadas como o labirinto a ser percorrido. O objetivo do problema é começar pela primeira matriz por uma coordenada que o usuário informará, depois chegar até a posição final dela(N-1,N-1) e nas matrizes seguintes começar da posição (0,0) e chegar na sua última(N-1,N-1) até todas elas serem lidas. 
 
-Foi pedido pelo o professor que no final do programa apresentasse o maior caminho percorrido e a soma dele. Por isso, o método de escolha de qual será a  coordenada escolhida posteriormente é o maior número de cada uma em comparação as casas vizinhas. Porém, existem regras no método de escolha dependendo da posição da coordenada. Elas são:
+Foi pedido pelo o professor que no final do programa apresentasse o maior caminho percorrido e a soma dele. Por isso, o método de escolha da coordenada posterior é o maior número de cada uma em comparação as casas vizinhas. Porém, existem regras no método de escolha dependendo da posição da coordenada. Elas são:
 
 * Quando a coordenada tem a coluna como 0:
 
 ![image](https://user-images.githubusercontent.com/102706840/227315265-a74144e3-634b-463e-93ef-d961b1ed9b64.png)
 
-Nesse caso, a comparação do maior número são entre a direita, diagonal inferior direita e o debaixo.
+Nesse caso, a comparação do maior número são entre a direita, diagonal inferior direita e o abaixo.
 
 * Quando a coordenada tem a coluna como N:
 
 ![image](https://user-images.githubusercontent.com/102706840/227316777-9acb8586-fe4c-4762-b12e-a59c22478a49.png)
 
-Já nesse caso, a comparação é entre a esquerda, diagonal inferior esquerda e o debaixo.
+Já nesse caso, a comparação é entre a esquerda, diagonal inferior esquerda e o abaixo.
 
 * Quando a coordenada tem a linha como N:
 
@@ -33,6 +33,8 @@ E quando chega na última linha, independente de qual coluna esteja, apenas pode
 
 A comparação será feita entre a esquerda, direita, diagonais inferiores e o debaixo.
 
+O caminho não pode retornar para qualquer casa que já tenha passado e também não poderá retornar para linha de cima a partir do momento que foi para a linha seguinte.
+
 ## Entrada
 
 O primeiro passo da entrada é o arquivo "input.data" que é fornecido pelo usuário. Este arquivo deve estar na pasta principal junto dos outros e possuir a formatação em que na primeira linha é informado o tamanho da matriz para ser lida corretamente no programa, como no exemplo abaixo:
@@ -43,17 +45,17 @@ Além de possuir as matrizes preenchidas corretamente como a seguir:
 
 ![image](https://user-images.githubusercontent.com/102706840/227332588-e9c73f61-5fd9-4947-8f01-f871b19a1c9c.png)
 
-Em um exeplo dado, mostra que a matriz terá o tamanho de 7 x 7 e no outro como deverá estar preenchida. Porém, a matriz poderá ser de qualquer tamanho e no arquivo ter quantas o usuário quiser. Nesse arquivo utilizado para teste há apenas 4 matrizes.
+No exemplo dado, mostra que a matriz terá o tamanho de 7 x 7 e no outro como deverá estar preenchida. Porém, a matriz poderá ser de qualquer tamanho e no arquivo ter quantas o usuário quiser. Nesse arquivo utilizado para teste há apenas 4 matrizes.
 
 Além dessa entrada, o usuário também deverá informar de qual posição gostaria de começar na primeira matriz da seguinte maneira: 
 
 ![image](https://user-images.githubusercontent.com/102706840/227334494-fb6943e3-b970-4282-93d4-b46dc02c7947.png)
 
-Assim, o programa iniciará o caminho.
+Assim, o programa iniciará o caminho a ser percorrido.
 
 ## Implementação
 
-Para a implementação da solução do problema foi utilizado a linguagem c++. Na lingaugem foram criados os arquivos main.cpp,labirinto.hpp e labirinto.cpp.
+Para a implementação da solução do problema foi utilizado a linguagem c++. Na lingaugem foram criados os arquivos main.cpp, labirinto.hpp e labirinto.cpp .
 
 No labirinto.hpp foram criadas as funções utilizadas para ler o arquivo e caminhar pela matriz.
 
@@ -67,14 +69,14 @@ No labirinto.cpp foram desenvolvidas as funções criadas no hpp que serão expl
 ![image](https://user-images.githubusercontent.com/102706840/227361321-2e0f9e97-c341-48a6-98f9-dfba22a21ad6.png)
 
 
-Nessa função foi passado o arquivo input.data por ter sido aberto no main. Primeiro se lê nela as dimensões das matrizes informadas na primeira linha do arquivo, depois há um array de ponteiros que é alocado usando a palavra-chave "new". Esse array tem "rows" elementos, ou seja, "rows" ponteiros para arrays de inteiros. Depois, o loop "for" é usado para alocar um array de inteiros para cada ponteiro do array alocado anteriormente. O tamanho de cada array é "cols".
+Nessa função foi passado o arquivo "input.data" por ter sido aberto no main. Primeiro se lê nela as dimensões das matrizes informadas na primeira linha do arquivo, depois há um array de ponteiros que é alocado usando a palavra-chave "new". Esse array tem "rows" elementos, ou seja, "rows" ponteiros para arrays de inteiros. Depois, o loop "for" é usado para alocar um array de inteiros para cada ponteiro do array alocado anteriormente. O tamanho de cada array é "cols".
 
 Após isso há um while que é utilizado para ler as matrizes enquanto o arquivo não falhar, dentro dele há um duplo for para fazer a leitura de cada elemento da matriz. Após isso, há a função Caminhar() que será utilizada para andar na matriz até chegar ao seu último elemento.
 
 ![image](https://user-images.githubusercontent.com/102706840/227361762-993b6b27-df67-4627-a5a6-a645103ccbab.png)
 
 
-Foi criado um contador para saber qual é a matriz que está sendo lida e depois vem um duplo for novamente para imprimir a matriz e imprime # no lugar do -1 que mostrá o caminho feito nela. Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
+Foi criado um contador para saber qual é a matriz que está sendo lida e depois tem um duplo for novamente para imprimir a matriz. Nesse duplo for, existe a condição de imprimir # no lugar do -1 para mostrar o caminho feito. Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
 
 * void Caminhar()
 
@@ -82,17 +84,17 @@ Foi criado um contador para saber qual é a matriz que está sendo lida e depois
 
 
 
-Nessa função é passado a matriz lida naquele momento que servirá para percorrer o caminho, o número de linhas e colunas da matriz para fazer um parâmetro das condições, a soma para no final conseguir mostrar o total dela e o ContarMatriz que servirá para saber em qual matriz está.
+Nessa função é passado a matriz lida naquele momento, o número de linhas e colunas da matriz para fazer um parâmetro das condições, a soma para no final conseguir mostrar o total dela e o ContarMatriz que servirá para saber em qual matriz está.
 
-Se o ContarMatriz for 0, significa que ainda está na primeira matriz, então o programa pedirá o usuário para informar a linha e coluna que ele quer começar, se não for 0 começará pela posição (0,0) como o exercício pediu.
+Se o ContarMatriz for 0, significa que ainda está na primeira matriz, então o programa pedirá o usuário para informar a linha e coluna que ele quer começar, se não for 0 ,  começará pela posição (0,0) como o exercício pediu.
 
-Nisso, já soma a primeira posição que encontra a matriz, seja a (0,0) ou outra em que o usuário informou. E então é feito um "do while" para aplicar as medidas que serão tomadas se a coluna for 0, se a coluna for N-1, se a linha for N-1 e se estiver em qualquer posição. Isso vai se repetir até j+1 ou k+1 for diferente de N.
+Nisso, já somará a primeira posição que encontra a matriz, seja a (0,0) ou outra em que o usuário tiver informado. E então, é feito um "do while" para aplicar as medidas que serão tomadas se a coluna for 0, se a coluna for N-1, se a linha for N-1 e se estiver em outra posição. Isso vai se repetir até j+1 ou k+1 for diferente de N.
 
 * Funções Caminho0(), Caminho1(), Caminho2() e Caminho3()
 
-Nelas foram passadas a matriz, o k e o j para poder localizar a posição que está na matriz e extrair o número daquela posição. Além de passar o soma para poder somar os elementos nele para depois retornar o valor final.
+Nelas foram passadas a matriz, o k e o j para poder localizar a posição que está na matriz e extrair o número daquela posição. Além de passar o soma para poder somar o elemento.
 
-As funções são determinadas para ,respectivamente, andar apenas para a direita, andar para baixo, direita e diagonal inferior direita, andar para esquerda, diagonal inferior esquerda e baixo e para todas as posições menos para cima. Forma tratadas com if's que comparam se aquela posição é maior que todas as outras e se for ela será a próxima posição, é somada o elemento e aquela posição antiga se transforma em -1 , pois o caminho não poderá retroceder para ela.
+As funções são determinadas para ,respectivamente, andar apenas para a direita, andar para baixo, direita e diagonal inferior direita, andar para esquerda, diagonal inferior esquerda e baixo e para todas as posições menos para cima. Elas foram tratadas com if's que comparam se aquela posição é maior que todas as outras e se for, ela será a próxima posição. Também é somado o elemento e aquela posição antiga se transforma em -1 , pois o caminho não poderá retroceder para ela.
 
 As posições são dadas por:
 
@@ -104,7 +106,7 @@ As posições são dadas por:
 
 E no caso de se todas as coordenadas forem números iguais, o algoritmo deverá optar pela diagonal direita sempre,com exceção de quando a coluna é igual a N-1 que deverá optar para baixo.
 
-No main apenas foi incluso o labirinto.hpp , aberto o arquivo e feito a chamada da função LerMAtriz().
+No main apenas foi incluso o labirinto.hpp , aberto o arquivo e feito a chamada da função LerMatriz().
 
 ## Saída
 
