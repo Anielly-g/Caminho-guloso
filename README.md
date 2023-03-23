@@ -28,8 +28,7 @@ E quando chega na última linha, independente de qual coluna esteja, apenas pode
 
 * Em qualquer outra posição:
 
-
-
+![image](https://user-images.githubusercontent.com/102706840/227322545-78467ece-2dd7-4d43-9ae1-019d484b68a2.png)
 
 
 A comparação será feita entre a esquerda, direita, diagonais inferiores e o debaixo.
