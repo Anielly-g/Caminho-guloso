@@ -10,6 +10,7 @@ Foi pedido pelo o professor que no final do programa apresentasse o maior caminh
 
 * Quando a coordenada tem a coluna como 0:
 
+![image](https://user-images.githubusercontent.com/102706840/227315265-a74144e3-634b-463e-93ef-d961b1ed9b64.png)
 
 
 
