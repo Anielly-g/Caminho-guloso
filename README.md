@@ -12,6 +12,16 @@ Foi pedido pelo o professor que no final do programa apresentasse o maior caminh
 
 ![image](https://user-images.githubusercontent.com/102706840/227315265-a74144e3-634b-463e-93ef-d961b1ed9b64.png)
 
+* Quando a coordenada tem a coluna como N:
+
+![image](https://user-images.githubusercontent.com/102706840/227316777-9acb8586-fe4c-4762-b12e-a59c22478a49.png)
+
+* Quando a coordenada tem a linha como N:
+
+![image](https://user-images.githubusercontent.com/102706840/227317145-11dbcf69-1c90-439b-8dfd-30901d7f993d.png)
+
+
+
 
 
 
