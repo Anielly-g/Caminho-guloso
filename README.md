@@ -24,8 +24,15 @@ Já nesse caso, a comparação é entre a esquerda, diagonal inferior esquerda e
 
 ![image](https://user-images.githubusercontent.com/102706840/227317145-11dbcf69-1c90-439b-8dfd-30901d7f993d.png)
 
-E quando chega na última linha, independente de qualquer coluna só poderá se mover para a direita até a última posição.
+E quando chega na última linha, independente de qual coluna esteja, apenas poderá se mover para a direita até a última posição.
 
+* Em qualquer outra posição:
+
+
+
+
+
+A comparação será feita entre a esquerda, direita, diagonais inferiores e o debaixo.
 
 
 
