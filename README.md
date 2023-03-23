@@ -64,17 +64,17 @@ No labirinto.cpp foram desenvolvidas as funções criadas no hpp que serão expl
 
 * void LerMatriz()
 
-
-
-![image](https://user-images.githubusercontent.com/102706840/227355443-6ff1db44-e0ae-437c-aa7d-556e42944c6f.png)
-![image](https://user-images.githubusercontent.com/102706840/227357154-53486503-b215-47cd-910b-0a9afea95638.png)
+![image](https://user-images.githubusercontent.com/102706840/227361321-2e0f9e97-c341-48a6-98f9-dfba22a21ad6.png)
 
 
 Nessa função foi passado o arquivo input.data por ter sido aberto no main. Primeiro se lê nela as dimensões das matrizes informadas na primeira linha do arquivo, depois há um array de ponteiros que é alocado usando a palavra-chave "new". Esse array tem "rows" elementos, ou seja, "rows" ponteiros para arrays de inteiros. Depois, o loop "for" é usado para alocar um array de inteiros para cada ponteiro do array alocado anteriormente. O tamanho de cada array é "cols".
 
-Após isso há um while que é utilizado para ler as matrizes enquanto o arquivo não falhar, dentro dele há um duplo for para fazer a leitura de cada elemento da matriz. Após isso, há a função Caminhar() que será utilizada para andar na matriz até chegar ao seu último elemento e depois um duplo for novamente para imprimir a matriz e colocar * no caminho feito nela.
+Após isso há um while que é utilizado para ler as matrizes enquanto o arquivo não falhar, dentro dele há um duplo for para fazer a leitura de cada elemento da matriz. Após isso, há a função Caminhar() que será utilizada para andar na matriz até chegar ao seu último elemento.
 
-Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
+![image](https://user-images.githubusercontent.com/102706840/227361762-993b6b27-df67-4627-a5a6-a645103ccbab.png)
+
+
+Foi criado um contador para saber qual é a matriz que está sendo lida e depois vem um duplo for novamente para imprimir a matriz e imprime # no lugar do -1 que mostrá o caminho feito nela. Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
 
 * void Caminhar()
 
@@ -108,8 +108,9 @@ No main apenas foi incluso o labirinto.hpp , aberto o arquivo e feito a chamada 
 
 ## Saída
 
-A saída apresentará o caminho percorrido pela matriz em * e a soma total do caminho percorrido. Como a seguir do exemplo de teste:
+A saída apresentará o caminho percorrido pela matriz em # e a soma total do caminho percorrido. Como a seguir do exemplo de teste:
 
+![image](https://user-images.githubusercontent.com/102706840/227360261-61945599-5ca8-422b-baf2-e693af5ead00.png)
 
 
 
