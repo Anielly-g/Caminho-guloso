@@ -35,7 +35,19 @@ A comparação será feita entre a esquerda, direita, diagonais inferiores e o d
 
 ## Entrada
 
-O primeiro passo da entrada é o arquivo "input.data" que é fornecido pelo usuário. Este arquivo deve estar na pasta principal junto dos outros e possuir a formatação em que na primeira linha é informado o tamanho da matriz como no exemplo abaixo:
+O primeiro passo da entrada é o arquivo "input.data" que é fornecido pelo usuário. Este arquivo deve estar na pasta principal junto dos outros e possuir a formatação em que na primeira linha é informado o tamanho da matriz para ser lida corretamente no programa, como no exemplo abaixo:
+
+![image](https://user-images.githubusercontent.com/102706840/227331829-14272194-db84-47ff-9a0c-caf8f7a9fe28.png)
+
+Além de possuir as matrizes preenchidas corretamente como a seguir:
+
+![image](https://user-images.githubusercontent.com/102706840/227332588-e9c73f61-5fd9-4947-8f01-f871b19a1c9c.png)
+
+Em um exeplo dado mostra que a matriz terá o tamanho de 7 x 7 e uma preenchida corretamente, porém ela poderá ser de qualquer tamanho e ter quantas o usuário quiser. No arquivo utilizado para teste há apenas 4 matrizes.
+
+Além dessa entrada, o usuário também deverá informar de qual posição gostaria de começar na primeira matriz da seguinte maneira: 
+
+![image](https://user-images.githubusercontent.com/102706840/227334494-fb6943e3-b970-4282-93d4-b46dc02c7947.png)
 
 
 
