@@ -6,7 +6,7 @@ Atividade avaliativa da disciplina Algoritmos e Estruturas de Dados I  sobre o o
 
 O arquivo (input.data) disponibilizado pelo código feito pelo professor Michel Pires é composto pela definição do número de matrizes e o  tamanho N x N que elas terão. Essas matrizes serão utilizadas como o labirinto a ser percorrido. O objetivo do problema é começar pela primeira matriz por uma coordenada que o usuário informará, depois chegar até a posição final dela(N,N) e nas matrizes seguintes começar da posição (0,0) e chegar na sua última(N,N) até todas elas serem lidas. 
 
-Foi pedido pelo o professor que no final do programa apresentasse o maior caminho percorrido. Por isso, o método de escolha de qual será a  coordenada escolhida posteriormente é o maior número de cada uma em comparação as casas vizinhas. Porém, existem regras no método de escolha dependendo da posição da coordenada. Elas são:
+Foi pedido pelo o professor que no final do programa apresentasse o maior caminho percorrido e a soma dele. Por isso, o método de escolha de qual será a  coordenada escolhida posteriormente é o maior número de cada uma em comparação as casas vizinhas. Porém, existem regras no método de escolha dependendo da posição da coordenada. Elas são:
 
 * Quando a coordenada tem a coluna como 0:
 
@@ -33,6 +33,7 @@ E quando chega na última linha, independente de qual coluna esteja, apenas pode
 
 A comparação será feita entre a esquerda, direita, diagonais inferiores e o debaixo.
 
+## Implementação
 
 
 

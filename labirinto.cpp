@@ -125,7 +125,7 @@ void Caminho1(int** matriz, int *k,int* j,int* soma){
         matriz[*k][*j]=-1;
         *k=*k+1;
     }
-    else if(matriz[*k+1][*j+1]>matriz[*k][*j+1] && matriz[*k+1][*j+1]>matriz[*k+1][*j]){
+    else if(matriz[*k+1][*j+1]>=matriz[*k][*j+1] && matriz[*k+1][*j+1]>=matriz[*k+1][*j]){
         *soma+=matriz[*k+1][*j+1];
         matriz[*k][*j]=-1;
         *k=*k+1;
@@ -151,7 +151,7 @@ void Caminho2(int** matriz, int *k,int* j,int* soma){
         matriz[*k][*j]=-1;
         *j=*j-1;
     }
-    else if(matriz[*k+1][*j-1]>matriz[*k+1][*j] && matriz[*k+1][*j-1]>matriz[*k][*j-1]){
+    else if(matriz[*k+1][*j-1]>=matriz[*k+1][*j] && matriz[*k+1][*j-1]>=matriz[*k][*j-1]){
         *soma+=matriz[*k+1][*j-1];
         matriz[*k][*j]=-1;
         *j=*j-1;
@@ -197,7 +197,7 @@ void Caminho3(int** matriz, int *k,int* j,int* soma){
     *j = *j - 1;
     }
 
-    else if(matriz[*k+1][*j+1]>matriz[*k+1][*j-1] && matriz[*k+1][*j+1]>matriz[*k+1][*j] && matriz[*k+1][*j+1]>matriz[*k][*j-1] && matriz[*k+1][*j+1]>matriz[*k][*j+1]){
+    else if(matriz[*k+1][*j+1]>=matriz[*k+1][*j-1] && matriz[*k+1][*j+1]>=matriz[*k+1][*j] && matriz[*k+1][*j+1]>=matriz[*k][*j-1] && matriz[*k+1][*j+1]>=matriz[*k][*j+1]){
         
         *soma+=matriz[*k+1][*j+1];
         matriz[*k][*j]=-1;
