@@ -57,12 +57,14 @@ Para a implementação da solução do problema foi utilizado a linguagem c++. N
 
 No labirinto.hpp foram criadas as funções utilizadas para ler o arquivo e caminhar pela matriz.
 
+![image](https://user-images.githubusercontent.com/102706840/227354545-b7065579-eb7a-4e4a-9dcc-9634c6fcb0d5.png)
+
 
 No labirinto.cpp foram desenvolvidas as funções criadas no hpp que serão explicadas a seguir:
 
 * void LerMatriz()
-
-
+![image](https://user-images.githubusercontent.com/102706840/227355443-6ff1db44-e0ae-437c-aa7d-556e42944c6f.png)
+![image](https://user-images.githubusercontent.com/102706840/227357154-53486503-b215-47cd-910b-0a9afea95638.png)
 
 
 Nessa função foi passado o arquivo input.data por ter sido aberto no main. Primeiro se lê nela as dimensões das matrizes informadas na primeira linha do arquivo, depois há um array de ponteiros que é alocado usando a palavra-chave "new". Esse array tem "rows" elementos, ou seja, "rows" ponteiros para arrays de inteiros. Depois, o loop "for" é usado para alocar um array de inteiros para cada ponteiro do array alocado anteriormente. O tamanho de cada array é "cols".
@@ -72,6 +74,9 @@ Após isso há um while que é utilizado para ler as matrizes enquanto o arquivo
 Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
 
 * void Caminhar()
+
+![image](https://user-images.githubusercontent.com/102706840/227357648-1a16b99a-2c99-45b4-a6e8-e9740cdc50c9.png)
+
 
 
 Nessa função é passado a matriz lida naquele momento que servirá para percorrer o caminho, o número de linhas e colunas da matriz para fazer um parâmetro das condições, a soma para no final conseguir mostrar o total dela e o ContarMatriz que servirá para saber em qual matriz está.
@@ -95,6 +100,8 @@ As posições são dadas por:
 * diagonal esquerda inferior-> [*k+1][*j-1]
 
 E no caso de se todas as coordenadas forem números iguais, o algoritmo deverá optar pela diagonal direita sempre,com exceção de quando a coluna é igual a N-1 que deverá optar para baixo.
+
+No main apenas foi incluso o labirinto.hpp , aberto o arquivo e feito a chamada da função LerMAtriz().
 
 ## Saída
 
