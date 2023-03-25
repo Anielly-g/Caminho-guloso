@@ -14,13 +14,13 @@ Foi pedido pelo o professor que no final do programa apresentasse o maior caminh
 
 Nesse caso, a comparação do maior número são entre a direita, diagonal inferior direita e o abaixo.
 
-* Quando a coordenada tem a coluna como N:
+* Quando a coordenada tem a coluna como N-1:
 
 ![image](https://user-images.githubusercontent.com/102706840/227316777-9acb8586-fe4c-4762-b12e-a59c22478a49.png)
 
 Já nesse caso, a comparação é entre a esquerda, diagonal inferior esquerda e o abaixo.
 
-* Quando a coordenada tem a linha como N:
+* Quando a coordenada tem a linha como N-1:
 
 ![image](https://user-images.githubusercontent.com/102706840/227317145-11dbcf69-1c90-439b-8dfd-30901d7f993d.png)
 
@@ -55,7 +55,7 @@ Assim, o programa iniciará o caminho a ser percorrido.
 
 ## Implementação
 
-Para a implementação da solução do problema foi utilizado a linguagem c++. Na lingaugem foram criados os arquivos main.cpp, labirinto.hpp e labirinto.cpp .
+Para a implementação da solução do problema foi utilizado a linguagem c++. Na linguagem foram criados os arquivos main.cpp, labirinto.hpp e labirinto.cpp .
 
 No labirinto.hpp foram criadas as funções utilizadas para ler o arquivo e caminhar pela matriz.
 
@@ -71,12 +71,12 @@ No labirinto.cpp foram desenvolvidas as funções criadas no hpp que serão expl
 
 Nessa função foi passado o arquivo "input.data" por ter sido aberto no main. Primeiro se lê nela as dimensões das matrizes informadas na primeira linha do arquivo, depois há um array de ponteiros que é alocado usando a palavra-chave "new". Esse array tem "rows" elementos, ou seja, "rows" ponteiros para arrays de inteiros. Depois, o loop "for" é usado para alocar um array de inteiros para cada ponteiro do array alocado anteriormente. O tamanho de cada array é "cols".
 
-Após isso há um while que é utilizado para ler as matrizes enquanto o arquivo não falhar, dentro dele há um duplo for para fazer a leitura de cada elemento da matriz. Após isso, há a função Caminhar() que será utilizada para andar na matriz até chegar ao seu último elemento.
+Após isso há um "while" que é utilizado para ler as matrizes enquanto o arquivo não falhar, dentro dele há um "duplo for" para fazer a leitura de cada elemento da matriz. Após isso, há a função Caminhar() que será utilizada para andar na matriz até chegar ao seu último elemento.
 
 ![image](https://user-images.githubusercontent.com/102706840/227361762-993b6b27-df67-4627-a5a6-a645103ccbab.png)
 
 
-Foi criado um contador para saber qual é a matriz que está sendo lida e depois tem um duplo for novamente para imprimir a matriz. Nesse duplo for, existe a condição de imprimir # no lugar do -1 para mostrar o caminho feito. Quando acaba o while, existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
+Foi criado um contador para saber qual é a matriz que está sendo lida e depois tem um "duplo for" novamente para imprimir a matriz. Nesse "duplo for", existe a condição de imprimir # no lugar do -1 para mostrar o caminho feito. Quando acaba o "while", existe ainda a apresentação da soma total dos elementos percorridos dentro de todas as matrizes e depois uma liberação de memória.
 
 * void Caminhar()
 
@@ -94,7 +94,7 @@ Nisso, já somará a primeira posição que encontra a matriz, seja a (0,0) ou o
 
 Nelas foram passadas a matriz, o k e o j para poder localizar a posição que está na matriz e extrair o número daquela posição. Além de passar o soma para poder somar o elemento.
 
-As funções são determinadas para ,respectivamente, andar apenas para a direita, andar para baixo, direita e diagonal inferior direita, andar para esquerda, diagonal inferior esquerda e baixo e para todas as posições menos para cima. Elas foram tratadas com if's que comparam se aquela posição é maior que todas as outras e se for, ela será a próxima posição. Também é somado o elemento e aquela posição antiga se transforma em -1 , pois o caminho não poderá retroceder para ela.
+As funções são determinadas para ,respectivamente, andar apenas para a direita, andar para baixo, direita e diagonal inferior direita, andar para esquerda, diagonal inferior esquerda e baixo e para todas as posições menos para cima. Elas foram tratadas com "if's" que comparam se aquela posição é maior que todas as outras e se for, ela será a próxima posição. Também é somado o elemento e aquela posição antiga se transforma em -1 , pois o caminho não poderá retroceder para ela.
 
 As posições são dadas por:
 
